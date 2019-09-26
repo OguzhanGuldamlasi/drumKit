@@ -16,7 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/drumkit/src/components" />
   </component>
   <component name="ProjectId" id="1RJlDWrxsU4B6QC1oWrFO0LczIr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,7 +52,11 @@
       <option name="presentableId" value="Default" />
       <updated>1569392960459</updated>
       <workItem from="1569392962849" duration="1756000" />
-      <workItem from="1569394741694" duration="2191000" />
+      <workItem from="1569394741694" duration="23472000" />
+      <workItem from="1569431355414" duration="5794000" />
+      <workItem from="1569444051047" duration="1263000" />
+      <workItem from="1569479302195" duration="9657000" />
+      <workItem from="1569490422313" duration="3071000" />
     </task>
     <servers />
   </component>

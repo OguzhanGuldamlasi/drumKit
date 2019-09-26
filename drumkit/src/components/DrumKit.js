@@ -1,3 +1,4 @@
+
 import '../styles/DrumKit.css'
 import React from 'react'
 
@@ -8,10 +9,18 @@ class DrumKit extends React.Component{
         this.endSound=this.endSound.bind(this);
         this.state={
             playing:false,
-            className:'simpleButton'
+            className:'simpleButton',
+            module:null
         };
         window.addEventListener('keydown',this.playSound);
-        this.audio=new Audio(this.props.audio);
+        let audioName=this.props.ring;
+        import(`../sounds/${audioName}`+'.wav').then(
+            function (module) {
+                window.value=module;
+            }
+        )
+
+
     }
     endSound(){
         this.setState({
@@ -20,7 +29,7 @@ class DrumKit extends React.Component{
     }
     playSound(event){
         if(event.keyCode===this.props.code||event.type==='click'){
-            this.audio.play();
+            new Audio(window.value.default).play();
         }
         else{
             return ;
@@ -34,10 +43,10 @@ class DrumKit extends React.Component{
         return (
             <div>
                 <button
-                     onTransitionEnd={this.endSound}
-                     className={this.state.className}
-                     id={playing}
-                     onClick={this.playSound}>
+                    onTransitionEnd={this.endSound}
+                    className={this.state.className}
+                    id={playing}
+                    onClick={this.playSound}>
                     <kbd>{this.props.letter}</kbd>
                     <span className='sound'>{this.props.ring}</span>
                 </button>
