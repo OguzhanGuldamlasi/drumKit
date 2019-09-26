@@ -13,12 +13,7 @@ class DrumKit extends React.Component{
             module:null
         };
         window.addEventListener('keydown',this.playSound);
-        let audioName=this.props.ring;
-        import(`../sounds/${audioName}`+'.wav').then(
-            function (module) {
-                window.value=module;
-            }
-        )
+
 
 
     }
@@ -28,6 +23,12 @@ class DrumKit extends React.Component{
         })
     }
     playSound(event){
+        let audioName=this.props.ring;
+        import(`../sounds/${audioName}`+'.wav').then(
+            function (module) {
+                window.value=module;
+            }
+        );
         if(event.keyCode===this.props.code||event.type==='click'){
             new Audio(window.value.default).play();
         }
